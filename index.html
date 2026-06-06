@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LingoMotion - Akıcı Dil Öğrenim Platformu</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Glowing Elements -->
+  <div class="glow glow-purple"></div>
+  <div class="glow glow-blue"></div>
+  <div class="glow glow-pink"></div>
+
+  <!-- Navigation Header -->
+  <header class="navbar glass">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i data-lucide="languages"></i></span>
+        <span class="logo-text">Lingo<span>Motion</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Özellikler</a>
+        <a href="#velocity-tracks">Kelime Pistleri</a>
+        <a href="#sandbox">Konuşma Laboratuvarı</a>
+        <a href="#pricing">Üyelik</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-secondary btn-sm" id="btn-login">Giriş Yap</button>
+        <button class="btn btn-primary btn-sm" id="btn-start">Akışı Başlat</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <span class="badge"><i data-lucide="sparkles"></i> Yapay Zeka Destekli Akış Metodu</span>
+      <h1 class="hero-title">Dilleri Akıcı Bir<br>Hareketle <span>Öğrenin</span></h1>
+      <p class="hero-subtitle">Kaydırma hızınıza duyarlı interaktif kelime akışları ve yapay zeka telaffuz koçu ile geleneksel ezber yöntemlerini geride bırakın.</p>
+      
+      <div class="hero-cta">
+        <a href="#sandbox" class="btn btn-primary btn-lg">Ücretsiz Dene <i data-lucide="arrow-right"></i></a>
+        <a href="#features" class="btn btn-secondary btn-lg">Keşfet <i data-lucide="play-circle"></i></a>
+      </div>
+    </div>
+
+    <!-- Velocity Banner Behind/Under Hero -->
+    <div class="velocity-banner" id="hero-velocity-banner">
+      <div class="velocity-row" data-direction="-1" data-speed="1.2">
+        <div class="velocity-track">
+          <span>HELLO</span><span>BONJOUR</span><span>HOLA</span><span>MERHABA</span><span>CIAO</span><span>KONNICHIWA</span><span>GUTEN TAG</span><span>SALUT</span><span>ALOHA</span><span>NAMASTE</span>
+          <span>HELLO</span><span>BONJOUR</span><span>HOLA</span><span>MERHABA</span><span>CIAO</span><span>KONNICHIWA</span><span>GUTEN TAG</span><span>SALUT</span><span>ALOHA</span><span>NAMASTE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bento Grid Features Section -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <span class="section-badge">Akıllı Eğitim</span>
+      <h2 class="section-title">Hareket Odaklı Öğrenim Modülleri</h2>
+      <p class="section-desc">Görsel hız, momentum ve anlık geri bildirimlerle beyninizin öğrenme hızına uyum sağlayan benzersiz özellikler.</p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Card 1: Pronunciation Coach (Interactive) -->
+      <div class="bento-card card-large glass">
+        <div class="card-content">
+          <div class="icon-box"><i data-lucide="mic"></i></div>
+          <h3>Gerçek Zamanlı Telaffuz Analizi</h3>
+          <p>Yapay zeka ses dalgalarınızı analiz eder, vurgu hatalarınızı anında görselleştirerek düzeltir.</p>
+          
+          <!-- Interactive Voice Mini Demo -->
+          <div class="voice-widget">
+            <div class="widget-header">
+              <span class="lang-tag">İspanyolca</span>
+              <span class="status-indicator live">Kayıt Hazır</span>
+            </div>
+            <p class="practice-text">"Hola, ¿cómo estás hoy?"</p>
+            <div class="audio-waves" id="mini-waves">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <button class="btn btn-primary btn-sm btn-icon-only" id="mini-voice-btn" title="Seslendir">
+              <i data-lucide="play"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card-glow" style="background: var(--primary-glow);"></div>
+      </div>
+
+      <!-- Card 2: Velocity Grammar -->
+      <div class="bento-card card-medium glass">
+        <div class="card-content">
+          <div class="icon-box"><i data-lucide="activity"></i></div>
+          <h3>Momentum Odaklı Dilbilgisi</h3>
+          <p>Sayfayı kaydırma hızınız arttıkça, cümle yapısındaki ögeler (Özne, Yüklem, Nesne) ayrışır ve dinamik olarak rollerini gösterir.</p>
+          
+          <!-- Velocity animation representation -->
+          <div class="grammar-interactive-visual">
+            <div class="grammar-word subject" id="g-subj">Subject</div>
+            <div class="grammar-word verb" id="g-verb">Verb</div>
+            <div class="grammar-word object" id="g-obj">Object</div>
+            <div class="connector-line"></div>
+          </div>
+        </div>
+        <div class="card-glow" style="background: rgba(16, 185, 129, 0.25);"></div>
+      </div>
+
+      <!-- Card 3: Gamified streaks (Stats style) -->
+      <div class="bento-card card-small glass">
+        <div class="card-content">
+          <div class="icon-box"><i data-lucide="flame"></i></div>
+          <h3>Günlük Seriler</h3>
+          <p>Her gün antrenman yapın, akış hızınızı ve serinizi koruyarak ödülleri toplayın.</p>
+          <div class="streak-widget">
+            <div class="streak-circle">
+              <span class="streak-number">14</span>
+              <span class="streak-label">GÜN</span>
+            </div>
+            <div class="streak-days">
+              <span class="active">P</span><span class="active">S</span><span class="active">Ç</span><span class="active">P</span><span class="active">C</span><span>C</span><span>P</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow" style="background: rgba(245, 158, 11, 0.25);"></div>
+      </div>
+
+      <!-- Card 4: Interactive Sandbox Preview -->
+      <div class="bento-card card-medium glass">
+        <div class="card-content">
+          <div class="icon-box"><i data-lucide="message-square"></i></div>
+          <h3>Dinamik Dialog Simülatörü</h3>
+          <p>Seçtiğiniz dilde yapay zeka ile canlı sohbet edin, anlık çeviri ve ipuçlarından faydalanın.</p>
+          
+          <div class="chat-simulator">
+            <div class="chat-bubble bot">
+              <span class="sender">AI Elena</span>
+              <p>Bonjour! Comment ça va?</p>
+            </div>
+            <div class="chat-bubble user">
+              <span class="sender">Sen</span>
+              <p>Ça va bien, et toi? <span class="translation">"İyiyim, ya sen?"</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow" style="background: rgba(239, 68, 68, 0.25);"></div>
+      </div>
+
+      <!-- Card 5: Smart Vocabulary Grid -->
+      <div class="bento-card card-large glass">
+        <div class="card-content">
+          <div class="icon-box"><i data-lucide="layout-grid"></i></div>
+          <h3>İnteraktif Kelime Kartları</h3>
+          <p>Mouse hareketlerinize ve kaydırma hızınıza göre derinlik (3D) kazanan kelime havuzu ile kalıcı hafıza oluşturun.</p>
+          
+          <div class="vocab-grid-visual" id="interactive-grid">
+            <div class="grid-item" data-translation="Kitap">Book</div>
+            <div class="grid-item" data-translation="Seyahat">Journey</div>
+            <div class="grid-item" data-translation="Yıldız">Star</div>
+            <div class="grid-item" data-translation="Rüzgar">Wind</div>
+            <div class="grid-item" data-translation="Konuşmak">Speak</div>
+            <div class="grid-item" data-translation="Öğrenmek">Learn</div>
+          </div>
+        </div>
+        <div class="card-glow" style="background: rgba(99, 102, 241, 0.25);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll Velocity Tracks Section (Direct representation of the request) -->
+  <section class="velocity-tracks-section" id="velocity-tracks">
+    <div class="section-header">
+      <span class="section-badge">Hız Deneyimi</span>
+      <h2 class="section-title">Hıza Duyarlı Dil Pistleri</h2>
+      <p class="section-desc">Kaydırma hızınız (scroll velocity) bu kelimelerin akış yönünü ve hızını belirler. Hızlı kaydırın, kelimeler uçuşsun. Yukarı kaydırın, akış tersine dönsün.</p>
+    </div>
+
+    <!-- Multiple tracks moving at different base speeds & offset velocities -->
+    <div class="tracks-wrapper">
+      
+      <!-- Track 1: İngilizce / English -->
+      <div class="track-container">
+        <div class="track-info">
+          <span class="track-flag">🇬🇧</span>
+          <span class="track-name">İngilizce Akışı</span>
+        </div>
+        <div class="velocity-row track-row" data-direction="1" data-speed="1.0">
+          <div class="velocity-track text-gradient-purple">
+            <span>DISCOVERY</span><span>BEAUTIFUL</span><span>CHALLENGE</span><span>VELOCITY</span><span>IMMERSIVE</span><span>ADVENTURE</span><span>CREATIVITY</span><span>PRACTICE</span><span>FLUENCY</span>
+            <span>DISCOVERY</span><span>BEAUTIFUL</span><span>CHALLENGE</span><span>VELOCITY</span><span>IMMERSIVE</span><span>ADVENTURE</span><span>CREATIVITY</span><span>PRACTICE</span><span>FLUENCY</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 2: İspanyolca / Spanish -->
+      <div class="track-container">
+        <div class="track-info">
+          <span class="track-flag">🇪🇸</span>
+          <span class="track-name">İspanyolca Akışı</span>
+        </div>
+        <div class="velocity-row track-row" data-direction="-1" data-speed="1.5">
+          <div class="velocity-track text-gradient-green">
+            <span>AVENTURA</span><span>FLUIDEZ</span><span>APRENDIZAJE</span><span>HERMOSO</span><span>VELOCIDAD</span><span>CAMINO</span><span>CREATIVIDAD</span><span>MUNDO</span><span>SUEÑO</span>
+            <span>AVENTURA</span><span>FLUIDEZ</span><span>APRENDIZAJE</span><span>HERMOSO</span><span>VELOCIDAD</span><span>CAMINO</span><span>CREATIVIDAD</span><span>MUNDO</span><span>SUEÑO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 3: Almanca / German -->
+      <div class="track-container">
+        <div class="track-info">
+          <span class="track-flag">🇩🇪</span>
+          <span class="track-name">Almanca Akışı</span>
+        </div>
+        <div class="velocity-row track-row" data-direction="1" data-speed="1.2">
+          <div class="velocity-track text-gradient-pink">
+            <span>ABENTEUER</span><span>GESCHWINDIGKEIT</span><span>LERNEN</span><span>FLÜSSIGKEIT</span><span>WELT</span><span>KREATIVITÄT</span><span>HERAUSFORDERUNG</span><span>ERFOLG</span><span>TRAUM</span>
+            <span>ABENTEUER</span><span>GESCHWINDIGKEIT</span><span>LERNEN</span><span>FLÜSSIGKEIT</span><span>WELT</span><span>KREATIVITÄT</span><span>HERAUSFORDERUNG</span><span>ERFOLG</span><span>TRAUM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 4: Fransızca / French -->
+      <div class="track-container">
+        <div class="track-info">
+          <span class="track-flag">🇫🇷</span>
+          <span class="track-name">Fransızca Akışı</span>
+        </div>
+        <div class="velocity-row track-row" data-direction="-1" data-speed="1.8">
+          <div class="velocity-track text-gradient-blue">
+            <span>AVENTURE</span><span>FLUIDITÉ</span><span>APPRENTISSAGE</span><span>MONDE</span><span>VITESSE</span><span>CRÉATIVITÉ</span><span>RÊVE</span><span>SUCCÈS</span><span>MAGNIFIQUE</span>
+            <span>AVENTURE</span><span>FLUIDITÉ</span><span>APPRENTISSAGE</span><span>MONDE</span><span>VITESSE</span><span>CRÉATIVITÉ</span><span>RÊVE</span><span>SUCCÈS</span><span>MAGNIFIQUE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 5: İtalyanca / Italian -->
+      <div class="track-container">
+        <div class="track-info">
+          <span class="track-flag">🇮🇹</span>
+          <span class="track-name">İtalyanca Akışı</span>
+        </div>
+        <div class="velocity-row track-row" data-direction="1" data-speed="1.4">
+          <div class="velocity-track text-gradient-purple">
+            <span>AVVENTURA</span><span>FLUIDITÀ</span><span>APPRENDIMENTO</span><span>MONDO</span><span>VELOCITÀ</span><span>CREATIVITÀ</span><span>SOGNO</span><span>SUCCESSO</span><span>BELLISSIMO</span>
+            <span>AVVENTURA</span><span>FLUIDITÀ</span><span>APPRENDIMENTO</span><span>MONDO</span><span>VELOCITÀ</span><span>CREATIVITÀ</span><span>SOGNO</span><span>SUCCESSO</span><span>BELLISSIMO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 6: Japonca / Japanese -->
+      <div class="track-container">
+        <div class="track-info">
+          <span class="track-flag">🇯🇵</span>
+          <span class="track-name">Japonca Akışı</span>
+        </div>
+        <div class="velocity-row track-row" data-direction="-1" data-speed="1.6">
+          <div class="velocity-track text-gradient-green">
+            <span>継続</span><span>流暢</span><span>冒険</span><span>速度</span><span>世界</span><span>学習</span><span>創造性</span><span>夢</span><span>成功</span>
+            <span>継続</span><span>流暢</span><span>冒険</span><span>速度</span><span>世界</span><span>学習</span><span>創造性</span><span>夢</span><span>成功</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Voice & Conversation Sandbox Section -->
+  <section class="sandbox-section" id="sandbox">
+    <div class="section-header">
+      <span class="section-badge">Ses Laboratuvarı</span>
+      <h2 class="section-title">Konuşma ve Telaffuz Laboratuvarı</h2>
+      <p class="section-desc">Aşağıdaki dillerden birini seçin, kelimeyi dinleyin ve mikrofon simgesine basıp telaffuz edin. Yapay zeka ses eşleştirmesini deneyimleyin.</p>
+    </div>
+
+    <div class="sandbox-container glass">
+      <div class="sandbox-left">
+        <!-- Language selector tabs -->
+        <div class="sandbox-tabs">
+          <button class="sandbox-tab active" data-lang="en-US" data-phrase="Immersive learning builds native fluency." data-translation="Sarmal öğrenme, ana dil akıcılığı oluşturur.">İngilizce 🇬🇧</button>
+          <button class="sandbox-tab" data-lang="es-ES" data-phrase="El aprendizaje dinámico acelera la mente." data-translation="Dinamik öğrenme zihni hızlandırır.">İspanyolca 🇪🇸</button>
+          <button class="sandbox-tab" data-lang="de-DE" data-phrase="Übung macht den Meister im Sprachenlernen." data-translation="Pratik yapmak dil öğreniminde ustalaştırır.">Almanca 🇩🇪</button>
+          <button class="sandbox-tab" data-lang="fr-FR" data-phrase="La fluidité vient avec le mouvement continu." data-translation="Akıcılık, sürekli hareketle gelir.">Fransızca 🇫🇷</button>
+          <button class="sandbox-tab" data-lang="it-IT" data-phrase="L'apprendimento immersivo crea una fluidità naturale." data-translation="Sarmal öğrenme doğal bir akıcılık yaratır.">İtalyanca 🇮🇹</button>
+          <button class="sandbox-tab" data-lang="ja-JP" data-phrase="継続は力なり。継続的な動きが流暢さを生みます。" data-translation="Süreklilik güçtür. Sürekli hareket akıcılık getirir.">Japonca 🇯🇵</button>
+        </div>
+
+        <div class="sandbox-display">
+          <h3 id="sandbox-phrase">Immersive learning builds native fluency.</h3>
+          <p id="sandbox-translation">Sarmal öğrenme, ana dil akıcılığı oluşturur.</p>
+        </div>
+
+        <div class="sandbox-controls">
+          <button class="btn btn-secondary btn-icon-only" id="sandbox-listen-btn" title="Seslendir (Dinle)">
+            <i data-lucide="volume-2"></i>
+          </button>
+          
+          <button class="btn btn-primary record-circle" id="sandbox-record-btn" title="Konuş (Mikrofon)">
+            <i data-lucide="mic"></i>
+          </button>
+        </div>
+        
+        <div class="sandbox-tip">
+          <i data-lucide="info"></i>
+          <span>Gerçek ses sentezleme (TTS) API'si kullanılmaktadır. "Dinle" butonuna basıp gerçek telaffuzu duyabilirsiniz!</span>
+        </div>
+      </div>
+
+      <div class="sandbox-right">
+        <div class="sandbox-visualizer-box">
+          <div class="wave-visualizer" id="sandbox-waves">
+            <svg viewBox="0 0 200 100" class="wave-svg">
+              <path d="M10,50 Q30,50 50,50 T90,50 T130,50 T170,50 T190,50" class="wave-path" id="wave-p1"></path>
+              <path d="M10,50 Q30,50 50,50 T90,50 T130,50 T170,50 T190,50" class="wave-path" id="wave-p2"></path>
+            </svg>
+            <div class="analyzer-text" id="analyzer-status">Bekliyor...</div>
+          </div>
+          
+          <div class="score-card hidden" id="score-card">
+            <div class="score-value">94%</div>
+            <div class="score-label">Mükemmel Uyum</div>
+            <div class="score-details">
+              <span>Ritim: %98</span><span>Ton: %91</span><span>Vurgu: %93</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Section -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-header">
+      <span class="section-badge">Katılım</span>
+      <h2 class="section-title">Akışa Dahil Olun</h2>
+      <p class="section-desc">Seviyenize uygun planı seçin ve akıcı dil öğrenme maratonuna bugün başlayın.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Plan 1: Starter -->
+      <div class="pricing-card glass">
+        <div class="card-content">
+          <span class="plan-type">Başlangıç</span>
+          <div class="plan-price">₺0 <span>/ay</span></div>
+          <p>Dil öğrenim akışını test etmek ve temel modülleri denemek isteyenler için.</p>
+          <ul class="plan-features">
+            <li><i data-lucide="check"></i> Günlük 30 kelime akışı</li>
+            <li><i data-lucide="check"></i> Temel telaffuz geri bildirimi</li>
+            <li><i data-lucide="check"></i> 1 aktif dil</li>
+            <li><i data-lucide="x"></i> Gelişmiş diyalog simülatörü</li>
+          </ul>
+          <button class="btn btn-secondary w-100">Hemen Dene</button>
+        </div>
+      </div>
+
+      <!-- Plan 2: Pro (Featured) -->
+      <div class="pricing-card glass featured">
+        <div class="card-badge"><i data-lucide="star"></i> En Popüler</div>
+        <div class="card-content">
+          <span class="plan-type">Lingo Pro</span>
+          <div class="plan-price">₺149 <span>/ay</span></div>
+          <p>Sınırsız hız pisti ve yapay zeka telaffuz koçuyla akıcılığa ulaşmak isteyenler için.</p>
+          <ul class="plan-features">
+            <li><i data-lucide="check"></i> Sınırsız kelime pisti erişimi</li>
+            <li><i data-lucide="check"></i> Detaylı Yapay Zeka Ses Analizi</li>
+            <li><i data-lucide="check"></i> Tüm dillere tam erişim (15+ Dil)</li>
+            <li><i data-lucide="check"></i> İnteraktif Dialog Sandbox</li>
+            <li><i data-lucide="check"></i> Çevrimdışı öğrenim desteği</li>
+          </ul>
+          <button class="btn btn-primary w-100">Akışı Başlat</button>
+        </div>
+        <div class="card-glow" style="background: var(--primary-glow); opacity: 0.5;"></div>
+      </div>
+
+      <!-- Plan 3: Duo / Family -->
+      <div class="pricing-card glass">
+        <div class="card-content">
+          <span class="plan-type">Duo Akış</span>
+          <div class="plan-price">₺249 <span>/ay</span></div>
+          <p>İki kişi için özel, birbiriyle yarışmalı ve hız eşlemeli gelişim takipleri.</p>
+          <ul class="plan-features">
+            <li><i data-lucide="check"></i> 2 bağımsız Pro hesabı</li>
+            <li><i data-lucide="check"></i> İkili rekabet hız yarışları</li>
+            <li><i data-lucide="check"></i> Tüm Pro özellikler dahil</li>
+            <li><i data-lucide="check"></i> Ortak gelişim karnesi</li>
+          </ul>
+          <button class="btn btn-secondary w-100">Akışı Başlat</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon"><i data-lucide="languages"></i></span>
+          <span class="logo-text">Lingo<span>Motion</span></span>
+        </a>
+        <p>Hız, ritim ve hareket odaklı sarmal dil öğrenim deneyimi.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LingoMotion. Tüm hakları saklıdır.</p>
+        <div class="footer-socials">
+          <a href="#"><i data-lucide="github"></i></a>
+          <a href="#"><i data-lucide="twitter"></i></a>
+          <a href="#"><i data-lucide="instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

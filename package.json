@@ -1,0 +1,13 @@
+{
+  "name": "lingo-motion",
+  "version": "1.0.0",
+  "description": "Modern language learning landing page with scroll velocity animations.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
